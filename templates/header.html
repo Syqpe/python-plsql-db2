@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>INTEL</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css--> 
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/animate-wow.css') }}">
+      <!--main css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.min.css') }}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <link rel="icon" href="/static/images/intel.png">
+      
+   </head>
+   <body>
+      <style type="text/css">
+         ::-webkit-scrollbar {
+            width: 15px;
+         }
+         ::-webkit-scrollbar-track {
+            background: #14171A;
+         }
+         ::-webkit-scrollbar-thumb {
+            background: #1F2326;
+            border-radius: 10px;
+            border: 1.5px solid #FFFF00;
+         }
+         body {
+            background-image: url(static/images/157.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+         }
+      </style>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="row" style="background-color: #131313; border-bottom: 1.5px solid #FFFF00">
+                  <div class="col-md-4 col-sm-12 left-rs">
+                     <div class="navbar-header" style="height: 85px">
+                        <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        </button>
+                        <div class="hqw"><p>Choose the best laptops with us!</p></div>
+                        <a href="" class="navbar-brand" style="height: 85px; background-color: #131313; border-right: 0px;"><img src="{{ url_for('static', filename='images/intel.png') }}" style="margin-top: -27px" alt="" /></a>
+                        <style type="text/css">
+                           .hqw {
+                              display: flex;
+                              position: absolute;
+                              width: 520px;
+                              margin-left: 505px;
+                              margin-top: 21px;
+                              font-size: 30px;
+                              color: #fff;
+                              font-weight: 900;
+                           }
+                        </style>
+                     </div>
+                     
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                     <div class="right-nav">
+                        <div class="login-sr">
+                           <div class="login-signup">
+                              <ul>
+                                 
+                                 
+                                 <li>
+                                 
+                                 <a class="logout.do" href="/logout" style="font-size: 20px; font-weight: 900; margin-top: 5px; color: #FFFF00">Log out</a></li>  
+                              </ul>
+                           </div>
+                        </div>
+                        
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.container-fluid --> 
+         </nav>
+      </header>
+      {% block body %}{% endblock body %}

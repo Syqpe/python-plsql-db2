@@ -1,0 +1,83 @@
+{% extends "header.html" %}
+
+{% block title %}Product detail{% endblock title %}
+
+
+
+
+
+    {% block body %}
+      
+      <div class="product-page-main">
+        <style type="text/css">
+          .product-page-main {
+         background-color: #131313;
+       }
+       body {
+        background-color: #131313;
+       }
+        </style>
+         <div class="container">
+        
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="prod-page-title">
+                     <h2 style="color: #fff">{{ product[0][1] }} is added by {{product[0][5]}}</h2>
+                     
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               
+               <div class="col-md-7 col-sm-8">
+                  <div class="md-prod-page">
+                     <div class="md-prod-page-in" style="border-radius: 10px 10px 0 0">
+                        <div class="page-preview">
+                           <div class="preview">
+                              <div class="preview-pic tab-content" style="padding-left:150px">
+                                 <div class="tab-pane active" id="pic-1"><img src="{{product[0][3]}}"  width="50px" height="100px" alt="#"  /></div>
+                                 
+                              </div>
+
+                           </div>
+                        </div>
+                        
+                     </div>
+                     <div class="description-box" style="border-radius: 0 0 10px 10px; border-top: 10px solid #051D36">
+                        <div class="dex-a">
+                           <h4>Description</h4>
+                           <p>{{ product[0][4] }}
+                           </p>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="col-md-3 col-sm-12">
+                  <div class="price-box-right" style="border-radius: 10px">
+                    {% if owner== 1%}
+			        	<a class="btn btn-primary btn-lg" href="/product/update/{{product[0][0]}}" >Update laptop</a>
+			        	<br>
+			        
+			        	
+                        <a class="btn btn-primary btn-lg" href="/product/delete/{{product[0][0]}}">Delete laptop</a>
+                    {% endif %}
+			        
+			        	<br>
+                     <h4>Price</h4>
+                     <h3>$ {{ product[0][2] }}</h3>
+                     
+                      <form method="post">
+          				
+                     	<button class="addToKart" style="background-color: #b0e0e6; border-radius: 5px">Add to basket</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </div>
+      
+      {% endblock body %}
